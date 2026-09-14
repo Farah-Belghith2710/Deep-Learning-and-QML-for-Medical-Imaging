@@ -1,0 +1,9 @@
+.venv/
+venv/
+__pycache__/
+.env
+static/audio/
+token_usage.json
+vectorstore_groq/
+.pytest_cache/
+.DS_Store
