@@ -2,7 +2,7 @@
 
 > A lightweight, interactive web application combining a custom NumPy CNN feature extractor with a PennyLane variational quantum circuit classifier to detect synthetic medical scan anomalies.
 
-Inspired by research concepts in deep learning and quantum machine learning for medical imaging (such as work from Dr. Moulay Akhloufi's lab at Université de Moncton), scaled down to run locally in under a minute.
+
 
 ---
 
