@@ -11,14 +11,9 @@ import pennylane as qml
 
 st.set_page_config(page_title="Hybrid DL + QML — Medical Imaging", page_icon="🧬", layout="wide")
 
-st.title("🧬 Hybrid Deep Learning + Quantum ML for Medical Imaging")
-st.caption(
-    "A small CNN feature extractor feeding a variational quantum classifier — "
-    "inspired by Dr. Moulay Akhloufi's *Deep learning for medical imaging* project "
-    "(Université de Moncton), scaled down to run in your browser in under a minute."
-)
+st.title("Hybrid Deep Learning + Quantum ML for Medical Imaging")
 st.info(
-    "⚠️ **This is an educational toy, not a medical device.** All images are "
+    "This is an educational toy, not a medical device.** All images are "
     "computer-generated synthetic patterns, not real scans, and nothing here should "
     "inform any real diagnosis.",
     icon="⚠️",
@@ -27,7 +22,7 @@ st.info(
 # ---------------------------------------------------------------------------
 # Sidebar: configuration + train button
 # ---------------------------------------------------------------------------
-st.sidebar.header("⚙️ Pipeline settings")
+st.sidebar.header("Pipeline settings")
 n_per_class = st.sidebar.slider("Images per class", 20, 150, 60, step=10,
                                  help="Dataset size = 2 x this number. Bigger = slower, "
                                       "slightly more robust.")
@@ -41,7 +36,7 @@ st.sidebar.caption(
     "(roughly proportional to images × epochs). Stage 2 (the 4-qubit circuit) is fast."
 )
 
-train_clicked = st.sidebar.button("🚀 Train the pipeline", type="primary", width='stretch')
+train_clicked = st.sidebar.button("Train the pipeline", type="primary", width='stretch')
 
 if "result" not in st.session_state:
     st.session_state.result = None
@@ -74,7 +69,7 @@ if stale:
                "in the sidebar to retrain with the new settings.", icon="🔄")
 
 tab_data, tab_train, tab_try = st.tabs(
-    ["📊 Dataset", "🧠 Training & Results", "🎛️ Try it yourself"]
+    ["Dataset", "Training & Results", "Try it yourself"]
 )
 
 # ---------------------------------------------------------------------------
@@ -243,8 +238,4 @@ with tab_try:
                        f"`{pred['raw_score']:.3f}` — positive leans tumor, negative leans normal.")
 
 st.divider()
-st.caption(
-    "Reference: inspired by Dr. Moulay Akhloufi's *Deep learning for medical imaging* project "
-    "(Université de Moncton), which lists Quantum ML alongside deep learning as a research "
-    "direction. Not affiliated with or reviewed by that lab."
-)
+
