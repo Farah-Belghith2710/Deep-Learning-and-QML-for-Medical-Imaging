@@ -13,7 +13,7 @@ st.set_page_config(page_title="Hybrid DL + QML — Medical Imaging", page_icon="
 
 st.title("Hybrid Deep Learning + Quantum ML for Medical Imaging")
 st.info(
-    "This is an educational toy, not a medical device.** All images are "
+    "This is an educational toy, not a medical device. All images are "
     "computer-generated synthetic patterns, not real scans, and nothing here should "
     "inform any real diagnosis.",
     icon="⚠️",
